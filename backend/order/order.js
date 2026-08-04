@@ -7,6 +7,6 @@ app.get('/',(req,res)=>{
    return res.json({success:true,message:"Order Route"})
 })
 
-app.listen(8001,(req,res)=>{
+app.listen(8000,(req,res)=>{
     console.log("Order Server File")
 })
