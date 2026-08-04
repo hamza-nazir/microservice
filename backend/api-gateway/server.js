@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const express=require('express')
 const cors=require('cors')
 const app=express()
-app.use(cors({origin:process.env.front}))
+app.use(cors({origin: "*"}));
 
 
 app.use("/order",createProxyMiddleware({target: process.env.ORDER,changeOrigin: true,}));
