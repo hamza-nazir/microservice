@@ -13,7 +13,7 @@ app.use("/services",createProxyMiddleware({target: process.env.SERVICE,changeOri
 
 
 app.get('/',(req,res)=>{
-   return res.json({success:true,message:"Home Routee"})
+   return res.json({success:true,message:"Home Routee v1"})
 })
 
 app.listen(8000,(req,res)=>{
