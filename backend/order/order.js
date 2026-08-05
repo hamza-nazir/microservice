@@ -4,7 +4,7 @@ const app=express()
 
 
 app.get('/',(req,res)=>{
-   return res.json({success:true,message:"Order Route"})
+   return res.json({success:true,message:"Order Route v1"})
 })
 
 app.listen(8001,(req,res)=>{
