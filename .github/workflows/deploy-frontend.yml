@@ -1,0 +1,32 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+    paths:
+      - "frontend/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: appleboy/ssh-action@v1.2.0
+
+        with:
+          host: ${{ secrets.FRONTEND_HOST }}
+          username: ${{ secrets.FRONTEND_USER }}
+          key: ${{ secrets.FRONTEND_SSH_KEY }}
+
+          script: |
+            cd ~/microservice/frontend
+
+            git pull origin main
+
+            npm install
+
+            npm run build
+
+            pm2 restart frontend
