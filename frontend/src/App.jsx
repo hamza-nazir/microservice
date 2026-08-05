@@ -20,7 +20,7 @@ const App = () => {
     })
   }
   return (
-    <div>App
+    <div>App v2
       <button onClick={orderFun}>ORDER ROUTE</button>
       <button onClick={serviceFun}>SERVICE ROUTE</button>
       <button onClick={homeFun}>Home ROUTE</button>
