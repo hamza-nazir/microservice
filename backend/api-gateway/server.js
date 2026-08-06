@@ -16,6 +16,10 @@ app.get('/',(req,res)=>{
    return res.json({success:true,message:"Home Routee v90"})
 })
 
+app.get('/health',(req,res)=>{
+   return res.json({health:"healty"})
+})
+
 app.listen(8000,(req,res)=>{
     console.log("Main Server File")
 })
